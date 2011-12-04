@@ -9,7 +9,7 @@ db = SQLite3::Database.new(TRAC_DB_PATH)
 pages = db.execute('select name, text from wiki w2 where version = (select max(version) from wiki where name = w2.name);')
 
 pages.each do |title, body|
-  File.open(File.join(OUT_PATH, title.gsub(/\s/, '')), 'w') do |file|
+  File.open(File.join(OUT_PATH, title.gsub(/\s/, '') + '.rst'), 'w') do |file|
     body.gsub!(/\r/, '')
     body.gsub!(/\{\{\{([^\n]+?)\}\}\}/, '@\1@')
     body.gsub!(/\{\{\{\n#!([^\n]+?)(.+?)\}\}\}/m, '<pre><code class="\1">\2</code></pre>')
