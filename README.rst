@@ -11,7 +11,7 @@ Requirements
 How to install
 --------------
 
-First, install the *pandoc*, it may take 15min or more.
+First, install the `pandoc <http://johnmacfarlane.net/pandoc/>`_, it may take 15min or more.
 
 ::
 
