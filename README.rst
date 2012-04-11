@@ -11,6 +11,18 @@ Requirements
 How to install
 --------------
 
+First, install the *pandoc*, it may take 15min or more.
+
+::
+
+  sudo yum install cabal-install
+  sudo cabal update
+  sudo cabal install cabal-install
+  sudo cabal install json-0.4.4
+  sudo cabal install pandoc
+
+Then, install other required libralies to run convert.rb.
+
 ::
 
   sudo yum -y install sqlite-devel
